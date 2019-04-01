@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            display: flex;
+            width:100px;
+            height:100px;
+            margin: 0 auto;
+            background-color: lightgrey;
+            border:1px solid orange;
+            /*定义主轴上的对齐方式*/
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+        #box span{
+            width:25px;
+            height:25px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 2px;
+            text-align: center;
+            line-height: 25px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--此时的span是基于flex布局的flex item,此时对它设置宽和高属性是有效的-->
+    <span>1</span>
+</div>
+</body>
+</html>

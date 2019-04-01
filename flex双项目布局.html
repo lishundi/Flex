@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            display: flex;
+            width:100px;
+            height:100px;
+            margin-left:auto;
+            margin-right: auto;
+            background-color: lightgrey;
+            border:1px solid orange;
+            margin-top: 20px;
+        }
+        .box span{
+            width:25px;
+            height:25px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 3px;
+            text-align: center;
+            line-height: 25px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="box" style=" justify-content: flex-start;align-items: center;">
+    <span>1</span>
+</div>
+
+<div class="box" style="justify-content: space-between; ">
+    <span>1</span>
+    <span>2</span>
+</div>
+
+<div class="box" style="justify-content: space-between; align-items: center;flex-direction: column-reverse">
+    <span>1</span>
+    <span>2</span>
+</div>
+</body>
+</html>

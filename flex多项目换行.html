@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            display: flex;
+            width:100px;
+            height:100px;
+            margin-left:auto;
+            margin-right: auto;
+            background-color: lightgrey;
+            border:1px solid orange;
+            margin-top: 20px;
+        }
+        .box span{
+            width:25px;
+            height:25px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 3px;
+            text-align: center;
+            line-height: 25px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<!--以下６个属性用在项目上：order flex-grow flex-shrink flex-basis flex align-self-->
+<!--align-content属性定义了多根轴线的对齐方式,如果项目只有一根轴线,该属性不起作用-->
+<div class="box" style="flex-wrap: wrap;align-content: space-between;justify-content: flex-end" >
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+</div>
+
+<div class="box" style="flex-wrap: wrap;align-content: space-between;">
+<!--此时的flex item是div,div中的span是普通的行内元素,默认没有宽高-->
+    <div style="display:flex;flex-basis: 100%;justify-content: space-between">
+    <span>1</span>
+    <span>2</span>
+    </div>
+    <div style="display:flex;flex-basis:100%;justify-content:space-between">
+    <span>3</span>
+    <span>4</span>
+    </div>
+</div>
+
+<div class="box" style="flex-wrap: wrap;align-content: space-between;">
+    <!--此时的flex item是div,div中的span是普通的行内元素,默认没有宽高-->
+    <div style="display:flex;flex-basis: 100%;justify-content: space-between">
+        <span>1</span>
+        <span>2</span>
+    </div>
+    <div style="display: flex;flex-basis:100%;justify-content:center">
+        <span>中</span>
+    </div>
+    <div style="display:flex;flex-basis:100%;justify-content:space-between">
+        <span>3</span>
+        <span>4</span>
+    </div>
+</div>
+</body>
+</html>
